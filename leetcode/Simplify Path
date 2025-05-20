@@ -1,0 +1,20 @@
+class Solution(object):
+    def simplifyPath(self, path):
+        """
+        :type path: str
+        :rtype: str
+        """
+        path = path.split('/')
+        path = self.clean_list(path)
+        return '/' + '/'.join(path)
+    
+    def clean_list(self, path):
+        result = []
+        for s in path:
+            if s != '' and s != '.' and s != '..':
+                result.append(s)
+            if s == '..' and len(result) > 0:
+                result.pop()
+        return result
+
+        
