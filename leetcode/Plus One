@@ -1,0 +1,24 @@
+class Solution(object):
+    def plusOne(self, digits):
+        """
+        :type digits: List[int]
+        :rtype: List[int]
+        """
+        arra=[]
+        for i in range(len(digits)):
+            digits[i]=str(digits[i])
+
+        num=''.join(digits)
+        number=int(num)
+        number=number+1
+
+        string=str(number)
+        for i in range (len(string)):
+            arra.append(int(string[i]))
+        return arra
+
+
+                
+
+        
+        
